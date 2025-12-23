@@ -3,8 +3,6 @@ package prolevexman;
 import prolevexman.greatest.common.divisor1071.GreatestCommonDivisor1071;
 import prolevexman.merge.strings.alternately1768.*;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         String word1 = "dus";
@@ -13,6 +11,7 @@ public class Main {
         String word4 = "pwok";
         String str1 = "abcabc";
         String str2 = "abcabcabcabc";
+        String str3 = "abcabcabcabcabcabc";
 
         MergeStringsAlternately1768 mergeStringsAlternately1768 = new MergeStringsAlternately1768();
 
@@ -25,5 +24,7 @@ public class Main {
         System.out.println(mergeStringsAlternately1768.mergeSeveralStrings3(word1, word2, word3, word4, null));
 
         System.out.println(greatestCommonDivisor1071.gcdOfStrings(str1, str2));
+        System.out.println(greatestCommonDivisor1071.gcdOfStrings2(null, str2));
+        System.out.println(greatestCommonDivisor1071.gcdOfSeveralStrings(str2, str2, str3));
     }
 }
