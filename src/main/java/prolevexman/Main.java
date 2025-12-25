@@ -1,5 +1,6 @@
 package prolevexman;
 
+import prolevexman.greates.number.candies1431.GreatestNumberCandies;
 import prolevexman.greatest.common.divisor1071.GreatestCommonDivisor1071;
 import prolevexman.merge.strings.alternately1768.*;
 
@@ -13,9 +14,14 @@ public class Main {
         String str2 = "abcabcabcabc";
         String str3 = "abcabcabcabcabcabc";
 
+        int[] candies = {1, 2, 5, 6, 7};
+        int extraCandies = 3;
+
         MergeStringsAlternately1768 mergeStringsAlternately1768 = new MergeStringsAlternately1768();
 
         GreatestCommonDivisor1071 greatestCommonDivisor1071 = new GreatestCommonDivisor1071();
+
+        GreatestNumberCandies greatestNumberCandies = new GreatestNumberCandies();
 
 
         System.out.println(mergeStringsAlternately1768.mergeTwoStrings(word1, word2));
@@ -26,5 +32,6 @@ public class Main {
         System.out.println(greatestCommonDivisor1071.gcdOfStrings(str1, str2));
         System.out.println(greatestCommonDivisor1071.gcdOfStrings2(null, str2));
         System.out.println(greatestCommonDivisor1071.gcdOfSeveralStrings(str2, str2, str3));
+        System.out.println(greatestNumberCandies.kidsWithCandies(candies, extraCandies));
     }
 }
