@@ -11,7 +11,7 @@ public class Main {
         String word2 = "sydgcia";
         String word3 = "sioi";
         String word4 = "pwok";
-        String str1 = "abcabc";
+        String str1 = "abc";
         String str2 = "abcabcabcabc";
         String str3 = "abcabcabcabcabcabc";
 
@@ -41,10 +41,11 @@ public class Main {
 
         System.out.println(greatestCommonDivisor1071.gcdOfStrings(str1, str2));
         System.out.println(greatestCommonDivisor1071.gcdOfStrings2(null, str2));
-        System.out.println(greatestCommonDivisor1071.gcdOfSeveralStrings(str2, str2, str3));
-        System.out.println(tt.tt3(str2, str2, str3));
+        System.out.println(greatestCommonDivisor1071.gcdOfSeveralStrings(str1, str2, str3));
+        System.out.println(tt.tt3(str1, str2, str3));
         System.out.println(greatestNumberCandies.kidsWithCandies(candies, extraCandies));
         System.out.println(tt.tt4(candies, extraCandies));
         System.out.println(canPlaceFlowers605.canPlaceFlowers(flowerbed, n));
+        System.out.println(tt.tt5(flowerbed, n));
     }
 }
