@@ -4,6 +4,7 @@ import prolevexman.can.place.flowers605.CanPlaceFlowers605;
 import prolevexman.greates.number.candies1431.GreatestNumberCandies;
 import prolevexman.greatest.common.divisor1071.GreatestCommonDivisor1071;
 import prolevexman.merge.strings.alternately1768.*;
+import prolevexman.reverse.vowels.string.ReverseVowelsString345;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,6 +22,8 @@ public class Main {
         int[] flowerbed = {0, 1, 1, 1, 0, 0, 0, 1, 0, 0};
         int n = 2;
 
+        String reverseVowels = "SpaCEmArine";
+
         MergeStringsAlternately1768 mergeStringsAlternately1768 = new MergeStringsAlternately1768();
 
         GreatestCommonDivisor1071 greatestCommonDivisor1071 = new GreatestCommonDivisor1071();
@@ -28,6 +31,8 @@ public class Main {
         GreatestNumberCandies greatestNumberCandies = new GreatestNumberCandies();
 
         CanPlaceFlowers605 canPlaceFlowers605 = new CanPlaceFlowers605();
+
+        ReverseVowelsString345 reverseVowelsString345 = new ReverseVowelsString345();
 
         Tt tt = new Tt();
 
@@ -47,5 +52,7 @@ public class Main {
         System.out.println(tt.tt4(candies, extraCandies));
         System.out.println(canPlaceFlowers605.canPlaceFlowers(flowerbed, n));
         System.out.println(tt.tt5(flowerbed, n));
+        System.out.println(reverseVowelsString345.reverseVowelString345(reverseVowels));
+        System.out.println(tt.tt6(reverseVowels));
     }
 }

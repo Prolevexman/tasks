@@ -1,8 +1,6 @@
 package prolevexman;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Tt {
     //строки через билдер
@@ -119,18 +117,47 @@ public class Tt {
         int count = 0;
 
         for (int i = 0; i < flowerbed.length; i++) {
-            int left = (i == 0) ? 0 : flowerbed[i - 1];
-            int right = (i == flowerbed.length - 1) ? 0 : flowerbed[i + 1];
+             int left = (i == 0) ? 0 : flowerbed[i - 1];
+             int right = (i == flowerbed.length - 1) ? 0 : flowerbed[i + 1];
 
-            if (left == 0 && flowerbed[i] == 0 && right == 0) {
-                count++;
-                i++;
-                if (count >= n) {
-                    return true;
-                }
-            }
+             if (left == 0 && flowerbed[i] == 0 && right == 0) {
+                 count++;
+                 i++;
+                 if (count >= n) {
+                     return  true;
+                 }
+             }
         }
         return count >= n;
+    }
+
+    public String tt6(String string) {
+
+        char[] arr = string.toCharArray();
+        int leftPointer = 0;
+        int rightPointer = string.length() - 1;
+
+        while (leftPointer < rightPointer) {
+            while (leftPointer < rightPointer && !isVowel(arr[leftPointer])) {
+                leftPointer++;
+            }
+            while (leftPointer < rightPointer && !isVowel(arr[rightPointer])) {
+                rightPointer--;
+            }
+
+            char temp = arr[leftPointer];
+            arr[leftPointer] = arr[rightPointer];
+            arr[rightPointer] = temp;
+            leftPointer++;
+            rightPointer--;
+        }
+        return new String(arr);
+    }
+
+    private static final Set<Character> vowels = new HashSet<>(Arrays.asList('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'));
+
+    private boolean isVowel(char c) {
+        return vowels.contains(c);
     }
 
 
