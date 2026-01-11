@@ -131,6 +131,7 @@ public class Tt {
         return count >= n;
     }
 
+    //замена гласных
     public String tt6(String string) {
 
         char[] arr = string.toCharArray();
