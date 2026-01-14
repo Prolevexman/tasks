@@ -132,33 +132,33 @@ public class Tt {
     }
 
     //замена гласных
+    private static final Set<Character> vowels = new HashSet<>(Arrays.asList('a', 'e', 'i', 'o', 'u'));
     public String tt6(String string) {
 
         char[] arr = string.toCharArray();
         int leftPointer = 0;
-        int rightPointer = string.length() - 1;
+        int rigthPointer = arr.length - 1;
 
-        while (leftPointer < rightPointer) {
-            while (leftPointer < rightPointer && !isVowel(arr[leftPointer])) {
+        while (leftPointer < rigthPointer) {
+            while (leftPointer < rigthPointer && !isVowel(arr[leftPointer])) {
                 leftPointer++;
             }
-            while (leftPointer < rightPointer && !isVowel(arr[rightPointer])) {
-                rightPointer--;
+
+            while (leftPointer < rigthPointer && !isVowel(arr[rigthPointer])) {
+                rigthPointer--;
             }
 
             char temp = arr[leftPointer];
-            arr[leftPointer] = arr[rightPointer];
-            arr[rightPointer] = temp;
+            arr[leftPointer] = arr[rigthPointer];
+            arr[rigthPointer] = temp;
             leftPointer++;
-            rightPointer--;
+            rigthPointer--;
         }
         return new String(arr);
     }
-
-    private static final Set<Character> vowels = new HashSet<>(Arrays.asList('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'));
-
     private boolean isVowel(char c) {
-        return vowels.contains(c);
+        char lower = Character.toLowerCase(c);
+        return vowels.contains(lower);
     }
 
 

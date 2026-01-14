@@ -3,6 +3,7 @@ package prolevexman;
 import prolevexman.can.place.flowers605.CanPlaceFlowers605;
 import prolevexman.greates.number.candies1431.GreatestNumberCandies;
 import prolevexman.greatest.common.divisor1071.GreatestCommonDivisor1071;
+import prolevexman.is.subsequence392.IsSubsequence;
 import prolevexman.merge.strings.alternately1768.*;
 import prolevexman.move.zeroes283.MoveZeroes283;
 import prolevexman.reverse.vowels.string.ReverseVowelsString345;
@@ -29,6 +30,9 @@ public class Main {
 
         String reverseVowels = "SpaCEmArine";
 
+        String s = "axpi";
+        String t = "sapptxljjgpmfi";
+
         MergeStringsAlternately1768 mergeStringsAlternately1768 = new MergeStringsAlternately1768();
 
         GreatestCommonDivisor1071 greatestCommonDivisor1071 = new GreatestCommonDivisor1071();
@@ -40,6 +44,8 @@ public class Main {
         ReverseVowelsString345 reverseVowelsString345 = new ReverseVowelsString345();
 
         MoveZeroes283 moveZeroes283 = new MoveZeroes283();
+
+        IsSubsequence isSubsequence = new IsSubsequence();
 
         Tt tt = new Tt();
 
@@ -64,5 +70,7 @@ public class Main {
 
         moveZeroes283.moveZeroes(nums);
         System.out.println(Arrays.toString(nums));
+
+        System.out.println(isSubsequence.isSubsequence(s, t));
     }
 }
